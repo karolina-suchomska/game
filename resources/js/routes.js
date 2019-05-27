@@ -3,6 +3,10 @@ import VueRouter from 'vue-router';
 
 import Game from '@/js/components/Game';
 
+import VueAxios from 'vue-axios';
+import axios from 'axios';
+Vue.use(VueAxios, axios);
+
 Vue.use(VueRouter);
 
 const router = new VueRouter({
@@ -12,7 +16,7 @@ const router = new VueRouter({
             path: '/',
             name: 'game',
             component: Game
-        }
+        },        
     ]
 });
 

@@ -25,7 +25,8 @@ export default {};
 
     * {
         box-sizing: border-box;
-        background-color: rgb(51, 51, 51);
+        background-color: $body-bg;
+        color: white;
     }
     #app {
         height: 100%;
@@ -33,7 +34,6 @@ export default {};
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
-        color: #ffffff;
         margin: 0 auto;
         padding: 20px;
         font-size: calc(1.5rem + 5px);
@@ -48,20 +48,6 @@ export default {};
 
     .v-content {
         padding: 10px;
-    }
-
-    button {
-        background-color: rgb(32, 32, 32);
-        padding: 15px;
-        margin: 20px;
-        font-size: calc(0.8rem + 5px);
-        color: white;
-        outline: none;
-        border: none;
-        box-shadow: 0 0 3px rgb(117, 117, 117);;
-        &:hover {
-            background-color: rgb(61, 61, 61);
-        }
     }
 
 </style>
