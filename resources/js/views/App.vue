@@ -26,22 +26,22 @@ export default {};
     * {
         box-sizing: border-box;
         background-color: $body-bg;
-        color: white;
+        color: $white;
     }
     #app {
         height: 100%;
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        font-family: $font-Arial-sans-serif;
+        font-size: calc(1.5rem + 5px);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         margin: 0 auto;
         padding: 20px;
-        font-size: calc(1.5rem + 5px);
     }
 
     .v-toolbar__content {
-        font-size: calc(3rem + 5px);
-        font-family: $font-family-sans-serif;
+        font-family: $font-Anton-sans-serif;
+        font-size: calc(3rem + 5px);;
         text-transform: uppercase;
         padding: 10px;
     }

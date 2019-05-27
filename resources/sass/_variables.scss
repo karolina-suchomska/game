@@ -2,18 +2,17 @@
 $body-bg: rgb(51, 51, 51);
 
 // Typography
-$font-family-sans-serif: 'Anton', sans-serif;
-$font-size-base: 0.9rem;
+$font-Anton-sans-serif: 'Anton', sans-serif;
+$font-Arial-sans-serif: 'Arial', sans-serif;
+//$font-size-title: calc(3rem + 5px);
+//$font-size-base: calc(1.5rem + 5px);
+//$font-size-button: calc(0.8rem + 5px);
+//$font-size-table: calc(1.2rem + 5px);
 $line-height-base: 1.6;
 
 // Colors
-$blue: #3490dc;
-$indigo: #6574cd;
-$purple: #9561e2;
-$pink: #f66d9b;
-$red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
-$teal: #4dc0b5;
-$cyan: #6cb2eb;
+$white: rgb(255, 255, 255);
+$gray: rgb(117, 117, 117);
+$light: rgb(199, 199, 199);
+
+

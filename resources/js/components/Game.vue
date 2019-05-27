@@ -131,15 +131,15 @@ export default {
 
     button {
         background-color: $body-bg;
-        padding: 15px;
-        margin: 20px;
-        font-size: calc(0.8rem + 5px);
-        color: white;
+        font-size: calc(0.8rem + 5px); 
+        color: $white;
         outline: none;
         border: none;
-        box-shadow: 0 0 3px rgb(117, 117, 117);
+        margin: 20px;
+        padding: 15px;
+        box-shadow: 0 0 3px $gray;
         &:hover {
-            box-shadow: 0 0 3px rgb(199, 199, 199);
+            box-shadow: 0 0 3px $light;
         }
     }
 
