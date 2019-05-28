@@ -33,7 +33,6 @@ php artisan migrate --seed
 php artisan serve
 ```
 
-* And you're good to go !
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
