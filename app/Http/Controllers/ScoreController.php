@@ -25,11 +25,4 @@ class ScoreController extends Controller
 
       return response()->json('successfully added');
     }
-
-    public function delete(Score $score)
-    {
-      $score->delete();
-
-      return response()->json('successfully deleted');
-    }
 }
