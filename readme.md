@@ -1,3 +1,41 @@
+## Installation
+* Clone or download the repository
+```PHP
+git clone https://github.com/karolina-suchomska/game.git
+```
+
+* CD in project root directory and Run
+```PHP
+cd game/
+composer install 
+```
+* Run 
+```PHP
+npm install
+```
+
+* Rename .env.example to .env
+
+* Change your database credentials on the .env file
+
+* Run the generate application key
+```PHP
+php artisan key:generate
+```
+
+* Run the migrations and seed data on your database
+```PHP
+php artisan migrate --seed
+```
+
+* Run 
+```PHP
+php artisan serve
+```
+
+* And you're good to go !
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
