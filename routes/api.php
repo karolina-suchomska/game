@@ -8,4 +8,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/score', 'ScoreController@index');
 Route::post('/score', 'ScoreController@store');
-Route::delete('/score/delete', 'ScoreController@delete');
+Route::delete('/score/delete/', 'ScoreController@delete');

@@ -26,9 +26,9 @@ class ScoreController extends Controller
       return response()->json('successfully added');
     }
 
-    public function delete()
+    public function delete(Score $score)
     {
-      $scores = Score::table('scores')->delete();
+      $score->delete();
 
       return response()->json('successfully deleted');
     }

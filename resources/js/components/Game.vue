@@ -1,34 +1,34 @@
 <template>
-  <div class="game-container">
-    <div>
-        <button class="game-button" v-on:click="choose('rock')">
-            <span>Rock</span>
-            <i class="far fa-hand-rock"/>
-        </button>
-        <button class="game-button" v-on:click="choose('paper')">
-            <span>Paper</span>
-            <i class="far fa-hand-paper"/>
-        </button>
-        <button class="game-button" v-on:click="choose('scissors')">
-            <span>Scissors</span>
-            <i class="far fa-hand-scissors"/>
-        </button>
-    </div>
-  <div class="game-players">
-    <div class="game-items players">Player:  
-        <div>{{ player }}</div> 
-    </div>
-    <div class="game-items players">&amp;</div>
-    <div class="game-items players">Computer:  
-        <div>{{ computer }}</div> 
-    </div>
-    </div>
+    <div class="game-container">
+        <div class="button-container">
+            <button class="game-button" v-on:click="choose('rock')">
+                <span>Rock</span>
+                <i class="far fa-hand-rock"/>
+            </button>
+            <button class="game-button" v-on:click="choose('paper')">
+                <span>Paper</span>
+                <i class="far fa-hand-paper"/>
+            </button>
+            <button class="game-button" v-on:click="choose('scissors')">
+                <span>Scissors</span>
+                <i class="far fa-hand-scissors"/>
+            </button>
+        </div>
+        
     <div class="game-items">{{ winner.score }}</div>
+    <div class="game-players">
+        <div class="game-items players">Player:  
+            <div>{{ player }}</div> 
+        </div>
+        <div class="game-items players">&amp;</div>
+        <div class="game-items players">Computer:  
+            <div>{{ computer }}</div> 
+        </div>
+    </div>
 
     <table class="table">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Player choice</th>
                 <th>Computer choice</th>
                 <th>Score</th>
@@ -36,15 +36,13 @@
         </thead>
             <tbody>
                 <tr v-for="winner in winners" :key="winner.id">
-                    <td>{{ winner.id }}</td>
                     <td>{{ winner.player }}</td>
                     <td>{{ winner.computer }}</td>
                     <td>{{ winner.score }}</td>
                 </tr>
             </tbody>
         </table>
-    <div><button v-on:click.prevent="deleteScores()" class="btn btn-danger">Delete</button></div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -87,18 +85,11 @@ export default {
             else return 'Computer win!';
         },
         addHistory() {
-            let url = 'http://localhost:8000/api/score/';
+            let url = 'http://localhost:8000/api/score';
             this.axios.post(url, this.winner).then((response) => {
             this.$router.go({name: 'game'});
             });
         },
-        deleteScores()
-        {
-            let url = `http://localhost:8000/api/score/delete/`;
-            this.axios.delete(url).then(response => {
-            this.$router.go({name: 'game'});
-            });
-        }
     }
 }
 </script>
@@ -111,6 +102,10 @@ export default {
         padding: 20px;
     }
 
+    .button-container {
+        margin: 30px;
+    }
+
     .game-button {
         margin: 10px;
     }
@@ -118,18 +113,21 @@ export default {
     .game-players {
         display: flex;
         justify-content: center;
+        margin: 20px;
     }
 
     .players {
-        margin: 20px;
+        margin: 0 auto;
         padding: 10px;
     }
 
     .game-items {
-        margin: 20px;
+        margin: 30px 5px;
     }
 
     button {
+        width: 190px;
+        min-height: 50px;
         background-color: $body-bg;
         font-size: calc(0.8rem + 5px); 
         color: $white;
@@ -144,7 +142,17 @@ export default {
     }
 
     .table {
+        margin: 0 auto;
         padding: 10px;
-        font-size: calc(1.2rem + 5px);
+        font-size: calc(0.5rem + 10px);
+        th, td {
+        vertical-align: middle !important;
+        padding: 25px 5px !important;
+        }
+        th {
+            font-size: calc(1rem + 5px);
+        }
     }
+
+    
 </style>
