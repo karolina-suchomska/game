@@ -55,7 +55,6 @@ export default {
         computer: '----',
         winner: {},
         winners: [],
-        history: '',
         };
     },
     created() {
@@ -71,7 +70,7 @@ export default {
             this.winner.score = this.getWinner(this.player, this.computer);
             this.winner.player = this.player;
             this.winner.computer = this.computer;
-            this.history = this.addHistory();
+            this.addHistory();
         },
         getWinner(player, computer) {
             if (player == computer) {
